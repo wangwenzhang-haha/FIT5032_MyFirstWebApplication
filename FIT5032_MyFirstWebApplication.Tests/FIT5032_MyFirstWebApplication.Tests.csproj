@@ -98,12 +98,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FIT5032_MyFirstWebApplication\FIT5032_MyFirstWebApplication.csproj">
-      <Project>{1A2D91A1-191F-40E9-8970-4D5AB11F97FE}</Project>
-      <Name>FIT5032_MyFirstWebApplication</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
