@@ -20,6 +20,11 @@ namespace FIT5032_MyFirstWebApplication.Controllers
             return View();
         }
 
+        public ActionResult Service()
+        { 
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
