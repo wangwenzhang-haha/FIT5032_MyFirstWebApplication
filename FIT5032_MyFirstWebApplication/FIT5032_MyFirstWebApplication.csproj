@@ -215,6 +215,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="css\about.css" />
+    <Content Include="css\contact.css" />
     <Content Include="css\header.css" />
     <Content Include="css\Service.css" />
     <Content Include="css\vendor.css" />
