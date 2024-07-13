@@ -133,6 +133,7 @@
     .w3l-services-two .service-grids:nth-child(2) {
         margin-top: 50px;
     }
+/*Responsive*/
 
 @media all and (max-width: 991px) {
     .w3l-services-two .service-grids:nth-child(2) {
