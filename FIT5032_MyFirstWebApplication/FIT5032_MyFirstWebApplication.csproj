@@ -214,11 +214,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="css\about.css" />
-    <Content Include="css\contact.css" />
-    <Content Include="css\header.css" />
-    <Content Include="css\Service.css" />
-    <Content Include="css\vendor.css" />
     <Content Include="css\style-starter.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
