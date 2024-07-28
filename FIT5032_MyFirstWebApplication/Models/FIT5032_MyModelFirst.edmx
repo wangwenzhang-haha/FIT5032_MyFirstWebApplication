@@ -21,24 +21,24 @@
           <EntitySet Name="PostsSet" EntityType="FIT5032_MyModelFirst.Posts" />
           <EntitySet Name="ContactsSet" EntityType="FIT5032_MyModelFirst.Contacts" />
           <AssociationSet Name="UsersRegistrations" Association="FIT5032_MyModelFirst.UsersRegistrations">
-            <End Role="Users" EntitySet="UsersSet" />
-            <End Role="Registrations" EntitySet="RegistrationsSet" />
+            <End EntitySet="UsersSet" Role="Users" />
+            <End EntitySet="RegistrationsSet" Role="Registrations" />
           </AssociationSet>
           <AssociationSet Name="CoursesRegistrations" Association="FIT5032_MyModelFirst.CoursesRegistrations">
-            <End Role="Courses" EntitySet="CoursesSet" />
-            <End Role="Registrations" EntitySet="RegistrationsSet" />
+            <End EntitySet="CoursesSet" Role="Courses" />
+            <End EntitySet="RegistrationsSet" Role="Registrations" />
           </AssociationSet>
           <AssociationSet Name="ServicesRegistrations" Association="FIT5032_MyModelFirst.ServicesRegistrations">
-            <End Role="Services" EntitySet="ServicesSet" />
-            <End Role="Registrations" EntitySet="RegistrationsSet" />
+            <End EntitySet="ServicesSet" Role="Services" />
+            <End EntitySet="RegistrationsSet" Role="Registrations" />
           </AssociationSet>
           <AssociationSet Name="ReviewsRegistrations" Association="FIT5032_MyModelFirst.ReviewsRegistrations">
-            <End Role="Reviews" EntitySet="ReviewsSet" />
-            <End Role="Registrations" EntitySet="RegistrationsSet" />
+            <End EntitySet="ReviewsSet" Role="Reviews" />
+            <End EntitySet="RegistrationsSet" Role="Registrations" />
           </AssociationSet>
           <AssociationSet Name="UsersPosts" Association="FIT5032_MyModelFirst.UsersPosts">
-            <End Role="Users" EntitySet="UsersSet" />
-            <End Role="Posts" EntitySet="PostsSet" />
+            <End EntitySet="UsersSet" Role="Users" />
+            <End EntitySet="PostsSet" Role="Posts" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Users">
@@ -59,73 +59,73 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="courseName" Type="String" Nullable="false" />
-          <Property Name="description" Type="String" Nullable="false" />
-          <Property Name="duration" Type="String" Nullable="false" />
-          <Property Name="price" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="courseName" Nullable="false" Type="String" />
+          <Property Name="description" Nullable="false" Type="String" />
+          <Property Name="duration" Nullable="false" Type="String" />
+          <Property Name="price" Nullable="false" Type="String" />
           <NavigationProperty Name="Registrations" Relationship="FIT5032_MyModelFirst.CoursesRegistrations" FromRole="Courses" ToRole="Registrations" />
         </EntityType>
         <EntityType Name="Registrations">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="createdAt" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="createdAt" Nullable="false" Type="String" />
           <NavigationProperty Name="Users" Relationship="FIT5032_MyModelFirst.UsersRegistrations" FromRole="Registrations" ToRole="Users" />
-          <Property Name="UsersId" Type="Int32" Nullable="false" />
+          <Property Name="UsersId" Nullable="false" Type="Int32" />
           <NavigationProperty Name="Courses" Relationship="FIT5032_MyModelFirst.CoursesRegistrations" FromRole="Registrations" ToRole="Courses" />
-          <Property Name="CoursesId" Type="Int32" Nullable="false" />
+          <Property Name="CoursesId" Nullable="false" Type="Int32" />
           <NavigationProperty Name="Services" Relationship="FIT5032_MyModelFirst.ServicesRegistrations" FromRole="Registrations" ToRole="Services" />
-          <Property Name="ServicesId" Type="Int32" Nullable="false" />
+          <Property Name="ServicesId" Nullable="false" Type="Int32" />
           <NavigationProperty Name="Reviews" Relationship="FIT5032_MyModelFirst.ReviewsRegistrations" FromRole="Registrations" ToRole="Reviews" />
           </EntityType>
         <EntityType Name="Reviews">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="content" Type="String" Nullable="false" />
-          <Property Name="rating" Type="String" Nullable="false" />
-          <Property Name="createdAt" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="content" Nullable="false" Type="String" />
+          <Property Name="rating" Nullable="false" Type="String" />
+          <Property Name="createdAt" Nullable="false" Type="String" />
           <NavigationProperty Name="Registrations" Relationship="FIT5032_MyModelFirst.ReviewsRegistrations" FromRole="Reviews" ToRole="Registrations" />
           </EntityType>
         <EntityType Name="Services">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="serviceName" Type="String" Nullable="false" />
-          <Property Name="description" Type="String" Nullable="false" />
-          <Property Name="createdAt" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="serviceName" Nullable="false" Type="String" />
+          <Property Name="description" Nullable="false" Type="String" />
+          <Property Name="createdAt" Nullable="false" Type="String" />
           <NavigationProperty Name="Registrations" Relationship="FIT5032_MyModelFirst.ServicesRegistrations" FromRole="Services" ToRole="Registrations" />
         </EntityType>
         <EntityType Name="Posts">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" Nullable="false" />
-          <Property Name="subtitle" Type="String" Nullable="false" />
-          <Property Name="content" Type="String" Nullable="false" />
-          <Property Name="createdAt" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="title" Nullable="false" Type="String" />
+          <Property Name="subtitle" Nullable="false" Type="String" />
+          <Property Name="content" Nullable="false" Type="String" />
+          <Property Name="createdAt" Nullable="false" Type="String" />
           <NavigationProperty Name="Users" Relationship="FIT5032_MyModelFirst.UsersPosts" FromRole="Posts" ToRole="Users" />
-          <Property Name="UsersId" Type="Int32" Nullable="false" />
+          <Property Name="UsersId" Nullable="false" Type="Int32" />
         </EntityType>
         <EntityType Name="Contacts">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" Nullable="false" />
-          <Property Name="email" Type="String" Nullable="false" />
-          <Property Name="phone" Type="String" Nullable="false" />
-          <Property Name="message" Type="String" Nullable="false" />
-          <Property Name="createdAt" Type="String" Nullable="false" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="name" Nullable="false" Type="String" />
+          <Property Name="email" Nullable="false" Type="String" />
+          <Property Name="phone" Nullable="false" Type="String" />
+          <Property Name="message" Nullable="false" Type="String" />
+          <Property Name="createdAt" Nullable="false" Type="String" />
         </EntityType>
         <Association Name="UsersRegistrations">
-          <End Type="FIT5032_MyModelFirst.Users" Role="Users" Multiplicity="1" />
-          <End Type="FIT5032_MyModelFirst.Registrations" Role="Registrations" Multiplicity="*" />
+          <End Type="FIT5032_MyModelFirst.Users" Multiplicity="1" Role="Users" />
+          <End Type="FIT5032_MyModelFirst.Registrations" Multiplicity="*" Role="Registrations" />
           <ReferentialConstraint>
             <Principal Role="Users">
               <PropertyRef Name="Id" />
@@ -136,8 +136,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="CoursesRegistrations">
-          <End Type="FIT5032_MyModelFirst.Courses" Role="Courses" Multiplicity="1" />
-          <End Type="FIT5032_MyModelFirst.Registrations" Role="Registrations" Multiplicity="*" />
+          <End Type="FIT5032_MyModelFirst.Courses" Multiplicity="1" Role="Courses" />
+          <End Type="FIT5032_MyModelFirst.Registrations" Multiplicity="*" Role="Registrations" />
           <ReferentialConstraint>
             <Principal Role="Courses">
               <PropertyRef Name="Id" />
@@ -148,8 +148,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ServicesRegistrations">
-          <End Type="FIT5032_MyModelFirst.Services" Role="Services" Multiplicity="1" />
-          <End Type="FIT5032_MyModelFirst.Registrations" Role="Registrations" Multiplicity="*" />
+          <End Type="FIT5032_MyModelFirst.Services" Multiplicity="1" Role="Services" />
+          <End Type="FIT5032_MyModelFirst.Registrations" Multiplicity="*" Role="Registrations" />
           <ReferentialConstraint>
             <Principal Role="Services">
               <PropertyRef Name="Id" />
@@ -160,12 +160,12 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ReviewsRegistrations">
-          <End Type="FIT5032_MyModelFirst.Reviews" Role="Reviews" Multiplicity="0..1" />
-          <End Type="FIT5032_MyModelFirst.Registrations" Role="Registrations" Multiplicity="1" />
+          <End Type="FIT5032_MyModelFirst.Reviews" Multiplicity="0..1" Role="Reviews" />
+          <End Type="FIT5032_MyModelFirst.Registrations" Multiplicity="1" Role="Registrations" />
         </Association>
         <Association Name="UsersPosts">
-          <End Type="FIT5032_MyModelFirst.Users" Role="Users" Multiplicity="1" />
-          <End Type="FIT5032_MyModelFirst.Posts" Role="Posts" Multiplicity="*" />
+          <End Type="FIT5032_MyModelFirst.Users" Multiplicity="1" Role="Users" />
+          <End Type="FIT5032_MyModelFirst.Posts" Multiplicity="*" Role="Posts" />
           <ReferentialConstraint>
             <Principal Role="Users">
               <PropertyRef Name="Id" />
@@ -197,7 +197,7 @@
     <edmx:Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </edmx:Options>

@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c23b2793308e4c4ab9e6946f728f6a5b" Name="Diagram1" ZoomLevel="80" >
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Users" Width="1.5" PointX="1" PointY="0.875" />
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Courses" Width="1.5" PointX="7.125" PointY="1" />
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Registrations" Width="1.5" PointX="4.625" PointY="0.625" />
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Reviews" Width="1.5" PointX="5.375" PointY="4.625" />
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Services" Width="1.5" PointX="9.25" PointY="0.5" />
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Posts" Width="1.5" PointX="2.875" PointY="4.375" />
-        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Contacts" Width="1.5" PointX="8" PointY="4" />
+      <Diagram DiagramId="c23b2793308e4c4ab9e6946f728f6a5b" Name="Diagram1" ZoomLevel="66" DisplayType="true" >
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Users" Width="2" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Courses" PointX="8.125" PointY="3.375" Width="2.125" />
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Registrations" PointX="3.875" PointY="3.625" Width="2.125" />
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Reviews" PointX="4" PointY="0.5" Width="2" />
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Services" PointX="10.625" PointY="5.875" Width="2" />
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Posts" PointX="0.75" PointY="6.5" Width="1.75" />
+        <EntityTypeShape EntityType="FIT5032_MyModelFirst.Contacts" PointX="6.5" PointY="0.75" Width="1.5" IsExpanded="true" />
         <AssociationConnector Association="FIT5032_MyModelFirst.UsersRegistrations" />
         <AssociationConnector Association="FIT5032_MyModelFirst.CoursesRegistrations" />
         <AssociationConnector Association="FIT5032_MyModelFirst.ServicesRegistrations" />
